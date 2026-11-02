@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080a">
+<title>Altiora — Rise above the ordinary</title>
+<meta name="description" content="Futuristic glass residences in the heart of the city.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="pageprog"></div>
+
+<header class="nav">
+  <a class="brand" href="#descent">ALTIORA</a>
+  <nav>
+    <a href="#rooms" class="hide-m">Residences</a>
+    <a href="#amenities" class="hide-m">Amenities</a>
+    <a href="#book" class="btn btn-sm">Book a visit</a>
+  </nav>
+</header>
+
+<div id="loader">
+  <div class="loader-brand">ALTIORA</div>
+  <div class="loader-bar"><i></i></div>
+  <div class="loader-pct">0%</div>
+</div>
+
+<main>
+
+<!-- ============ 1. SKY → BUILDING DESCENT ============ -->
+<section id="descent" class="pin">
+  <div class="stage">
+    <canvas id="sky"></canvas>
+    <div class="shade"></div>
+
+    <div class="hero-title" id="heroTitle">
+      <h1>ALTIORA</h1>
+      <p>Residences above the city</p>
+    </div>
+
+    <div class="altimeter" aria-hidden="true">
+      <span class="alt-num"><b id="altNum">12,000</b> ft</span>
+      <span class="alt-line"><i id="altFill"></i></span>
+    </div>
+
+    <!-- Floating cards: data-from / data-to are scroll positions (0–1) of this section -->
+    <article class="fcard" data-side="left"  data-from=".12" data-to=".30" style="top:34%">
+      <span class="k">Height</span><span class="v">42 Floors</span><span class="d">A new landmark on the skyline.</span>
+    </article>
+    <article class="fcard" data-side="right" data-from=".26" data-to=".44" style="top:58%">
+      <span class="k">Views</span><span class="v">360° City Panorama</span><span class="d">Floor-to-ceiling glass on every side.</span>
+    </article>
+    <article class="fcard" data-side="left"  data-from=".40" data-to=".58" style="top:40%">
+      <span class="k">Smart Living</span><span class="v">Fully Automated</span><span class="d">Lighting, climate and security in your pocket.</span>
+    </article>
+    <article class="fcard" data-side="right" data-from=".54" data-to=".72" style="top:62%">
+      <span class="k">Location</span><span class="v">Minutes From Everything</span><span class="d">Metro, malls, schools and the business district.</span>
+    </article>
+    <article class="fcard" data-side="left"  data-from=".68" data-to=".86" style="top:36%">
+      <span class="k">Handover</span><span class="v">Q4 2028</span><span class="d">Flexible payment plans available.</span>
+    </article>
+
+    <div class="stats" id="stats">
+      <div><b data-to="42">0</b><span>Floors</span></div>
+      <div><b data-to="320">0</b><span>Apartments</span></div>
+      <div><b data-to="18">0</b><span>Amenities</span></div>
+    </div>
+
+    <div class="slogan" id="slogan">
+      <h2>Rise above<br><em>the ordinary.</em></h2>
+      <p>42 floors of glass-wrapped living in the heart of the city.</p>
+      <a class="btn" href="#rooms">Step inside</a>
+    </div>
+
+    <div class="scroll-hint" id="hint"><span>Scroll to descend</span><i></i></div>
+  </div>
+</section>
+
+<!-- ============ 2. ROOMS ============ -->
+<section id="rooms" class="pin">
+  <div class="stage">
+    <div class="slide" style="--img:url(images/room-drawing.jpg);--fb:linear-gradient(135deg,#2b2d42,#8d99ae)">
+      <div class="img"></div>
+      <div class="cap"><span class="num">01</span><h3>The Drawing Room</h3><p>Double-height ceilings, warm stone and a skyline for a wall.</p></div>
+    </div>
+    <div class="slide" style="--img:url(images/room-lounge.jpg);--fb:linear-gradient(135deg,#3a2a20,#c8a27a)">
+      <div class="img"></div>
+      <div class="cap"><span class="num">02</span><h3>The Lounge</h3><p>Soft light, deep seating, and quiet that feels earned.</p></div>
+    </div>
+    <div class="slide" style="--img:url(images/room-bedroom.jpg);--fb:linear-gradient(135deg,#1f2a37,#6b7f99)">
+      <div class="img"></div>
+      <div class="cap"><span class="num">03</span><h3>The Bedroom Suite</h3><p>Wake up inside the clouds. Black-out to sunrise at a touch.</p></div>
+    </div>
+    <div class="slide" style="--img:url(images/room-rooftop.jpg);--fb:linear-gradient(135deg,#0f2027,#2c5364)">
+      <div class="img"></div>
+      <div class="cap"><span class="num">04</span><h3>The Rooftop</h3><p>Dinner above the city. Your own private horizon.</p></div>
+    </div>
+    <div class="room-top"><span>Inside Altiora</span><span id="roomCount">01 / 04</span></div>
+    <div class="dots" id="roomDots"><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ============ 3. AMENITIES ============ -->
+<section id="amenities" class="pin">
+  <div class="stage am-stage">
+    <div class="am-glow"></div>
+    <div class="am-title"><h2>Amenities</h2><p>Everything you need, never more than a lift away.</p></div>
+
+    <div class="acard" style="--img:url(images/amenity-gym.jpg);--fb:linear-gradient(160deg,#232526,#414345)"><div class="img"></div><div class="lab"><b>Gym</b><span>Technogym studio, open 24/7</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-padel.jpg);--fb:linear-gradient(160deg,#0f3443,#34e89e)"><div class="img"></div><div class="lab"><b>Padel Courts</b><span>Floodlit, glass-walled courts</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-cricket.jpg);--fb:linear-gradient(160deg,#134e5e,#71b280)"><div class="img"></div><div class="lab"><b>Cricket Ground</b><span>Turf pitch with practice nets</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-pool.jpg);--fb:linear-gradient(160deg,#0575e6,#021b79)"><div class="img"></div><div class="lab"><b>Infinity Pool</b><span>Heated, with sky-deck lounge</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-sauna.jpg);--fb:linear-gradient(160deg,#4b2e1e,#b07a4a)"><div class="img"></div><div class="lab"><b>Sauna &amp; Spa</b><span>Steam, sauna and cold plunge</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-cinema.jpg);--fb:linear-gradient(160deg,#1a0a2e,#5b2a86)"><div class="img"></div><div class="lab"><b>Private Cinema</b><span>Dolby sound, reservable screenings</span></div></div>
+    <div class="acard" style="--img:url(images/amenity-mall.jpg);--fb:linear-gradient(160deg,#42275a,#734b6d)"><div class="img"></div><div class="lab"><b>Shopping Mall</b><span>Retail and dining in the podium</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 4. BOOKING ============ -->
+<section id="book">
+  <div class="book-wrap">
+    <div class="book-copy">
+      <span class="eyebrow">Book a private visit</span>
+      <h2>Your next address<br><em>is above everything.</em></h2>
+      <p>Tour the show apartment, see the plans and get a tailored payment schedule. Our team will confirm within one working day.</p>
+      <ul class="contact">
+        <li><b>Call</b> +92 300 1234567</li>
+        <li><b>Email</b> hello@altiora.com</li>
+        <li><b>Sales gallery</b> Your address, City</li>
+      </ul>
+    </div>
+
+    <form id="bookForm" class="form" autocomplete="on">
+      <div class="row">
+        <label>Full name<input name="name" required placeholder="Your name"></label>
+        <label>Phone<input name="phone" type="tel" required placeholder="+92 …"></label>
+      </div>
+      <label>Email<input name="email" type="email" placeholder="you@email.com"></label>
+      <div class="row">
+        <label>Residence type
+          <select name="type">
+            <option>1 Bedroom</option><option>2 Bedroom</option><option>3 Bedroom</option><option>Penthouse</option>
+          </select>
+        </label>
+        <label>Preferred date<input name="date" type="date"></label>
+      </div>
+      <label>Message<textarea name="msg" rows="3" placeholder="Anything we should know?"></textarea></label>
+      <button class="btn btn-solid" type="submit">Request my visit</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+  <footer>© <span id="yr"></span> Altiora Developments. All rights reserved.</footer>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
